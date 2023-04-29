@@ -29,7 +29,7 @@ const servicesTitleContainer = {
 const servicesTitle = {
     backgroundColor: "#F7A5CD",
     color: "black",
-    fontFamily: "roboto",
+    fontFamily: "Space Grotesk",
     fontStyle: "normal",
     fontWeight: "500",
     fontSize: "40px",
@@ -40,7 +40,7 @@ const servicesTitle = {
 
 const servicesSubtitle = {
     marginLeft: "20px",
-    fontFamily: "roboto",
+    fontFamily: "Space Grotesk",
     marginBottom: "20px",
     marginTop: "20px"
 }
@@ -73,6 +73,7 @@ const cardContent = {
 const cardTitle = (bg: string) => {
     return {
         backgroundColor: bg,
+        fontFamily: "Space Grotesk",
         fontStyle: "normal",
         fontWeight: "500",
         fontSize: "26px",
@@ -103,14 +104,14 @@ const investmentLogoImage = {
 }
 
 const etherLogoImage = {
-    width: "158px",
+    width: "130px",
     marginTop: "10px",
-    marginLeft: "20px"
+    marginLeft: "40px"
 }
 
 const onlinePaymentsImage = {
     width: "220px",
-    marginTop: "10px"
+    marginTop: "40px"
 }
 
 export function Services() {

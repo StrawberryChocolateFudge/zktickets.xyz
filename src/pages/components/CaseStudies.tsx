@@ -16,7 +16,7 @@ const caseStudiesTitleContainer = {
 const caseStudiesTitle = {
     backgroundColor: "#F7A5CD",
     color: "black",
-    fontFamily: "roboto",
+    fontFamily: "Space Grotesk",
     fontStyle: "normal",
     fontWeight: "500",
     fontSize: "40px",
@@ -27,7 +27,7 @@ const caseStudiesTitle = {
 
 const caseStudiesSubtitle = {
     marginLeft: "20px",
-    fontFamily: "roboto",
+    fontFamily: "Space Grotesk",
     marginBottom: "20px",
     marginTop: "20px",
     textAlign: "center" as "center"
@@ -53,7 +53,7 @@ const useCaseCard = {
     fontWeight: "400",
     fontStyle: "normal",
     fontSize: "20px",
-    fontFamily: "roboto"
+    fontFamily: "Space Grotesk"
 }
 
 export function CaseStudies() {

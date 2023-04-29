@@ -3,6 +3,7 @@ import React from "react";
 import logo from "../../images/logo.png";
 //@ts-ignore
 import party from "../../images/undraw_online_party.svg";
+import { ZkTicketsLogo } from "./ZkTicketsLogo";
 
 const headerSectionStyle = {
     marginTop: "10px"
@@ -32,7 +33,7 @@ const titleContainer = {
 const TitleText = {
     width: "390px",
     // height: "165px",
-    fontFamily: "Roboto",
+    fontFamily: "Space Grotesk",
     fontStyle: "normal",
     fontWeight: "500",
     fontSize: "30px",
@@ -57,7 +58,7 @@ const subtitleContainer = {
 const subtitle = {
     width: "340px",
     heigth: "96px",
-    fontFamily: "Roboto",
+    fontFamily: "Space Grotesk",
     fontStyle: "normal",
     fontWeight: "400",
     fontSize: "16px",
@@ -99,18 +100,16 @@ const tryItOutButton = {
     fontSize: "20px",
     textAlign: "center" as "center",
     fontStyle: "normal",
-    fontFamily: "Roboto",
-    margin: "0 auto"
+    fontFamily: "Space Grotesk",
+    margin: "0 auto",
+    cursor: "pointer"
 }
 // I need to get the screen width to determine if it's a phone or not
 
 export function HeaderBar() {
     return <section style={headerSectionStyle}>
         <div style={headerRow}>
-            <div>
-                {/* <img src={logo} style={logoStyle} /> */}
-                zkTickets.xyz
-            </div>
+            <ZkTicketsLogo color="black"></ZkTicketsLogo>
             <div style={navigatorEl}>
             </div>
         </div>
@@ -127,7 +126,7 @@ export function HeaderBar() {
                 </div>
             </div>
             <div style={tryItButtonContainer}>
-                <button style={tryItOutButton}>Try it out</button>
+                <button onClick={() => window.location.href = "https://btt.zktickets.xyz"} style={tryItOutButton}>Try it out</button>
             </div>
         </div>
     </section>
