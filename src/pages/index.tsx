@@ -8,6 +8,7 @@ import { WorkProcess } from "../components/WorkProcess"
 import { DownloadTheMobileApp } from "../components/DownloadTheMobileApp"
 import { BottomBar } from "../components/BottomBar";
 import "./styles.css";
+import { ExtendableProtocol } from "../components/ExtendableProtocol"
 
 export interface GeneralProps {
   windowSize: number;
@@ -23,7 +24,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
   React.useEffect(() => {
     setWindowSize(window.innerWidth);
-  },[])
+  }, [])
 
 
   React.useEffect(() => {
@@ -43,6 +44,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <CaseStudies windowSize={windowSize}></CaseStudies>
       <WorkProcess windowSize={windowSize}></WorkProcess>
       <DownloadTheMobileApp windowSize={windowSize}></DownloadTheMobileApp>
+      <ExtendableProtocol></ExtendableProtocol>
       <BottomBar windowSize={windowSize}></BottomBar>
     </main>
   )

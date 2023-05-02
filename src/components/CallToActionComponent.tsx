@@ -70,7 +70,7 @@ export function CallToAcionComponent(props: GeneralProps) {
         <div className="grow" style={callToActionContainer}>
             <div style={callToActionTextContainer}>
                 <div style={callToActionTitle}>Let's make events happen!</div>
-                <div style={callToActionSubtitle}>Try the application today and create your first event. It's very easy. Just select the network and fill out the form!</div>
+                <div style={callToActionSubtitle}>Try the application today and create your first event. It's very easy. Just connect your wallet and fill out the form!</div>
                 <button onClick={() => window.location.href = "https://btt.zktickets.xyz"} style={launchTheAppButton}>Launch the App</button>
             </div>
             <img style={IdeationLogoStyle} src={IdeationLogo} />
