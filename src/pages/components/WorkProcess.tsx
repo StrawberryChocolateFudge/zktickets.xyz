@@ -5,6 +5,7 @@ import React from "react";
 import PlusLogo from "../../images/plusIcon.svg";
 //@ts-ignore
 import MinusLogo from "../../images/minusIcon.svg";
+import { GeneralProps } from "..";
 
 const WorkProcessSection = { marginTop: "30px" }
 
@@ -52,11 +53,13 @@ const accordionOutterContainerClosed = {
     border: "1px solid #191A23",
     boxShadow: "0px 5px 0px #191A23",
     borderRadius: "45px",
-    width: "300px",
+    minWidth: "270px",
+    maxWidth: "600px",
     height: "30px",
     margin: "0 auto",
     cursor: "pointer",
-    marginBottom: "20px"
+    marginBottom: "20px",
+    width: "70%"
 }
 
 const accordionOutterContainerOpen = {
@@ -68,11 +71,13 @@ const accordionOutterContainerOpen = {
     border: "1px solid #191A23",
     borderRadius: "45px",
     boxShadow: "0px 5px 0px #191A23",
-    width: "300px",
+    minWidth: "270",
+    maxWidth: "600px",
     height: "60px",
     margin: "0 auto",
     cursor: "pointer",
-    marginBottom: "20px"
+    marginBottom: "20px",
+    width: "70%"
 }
 
 const accordionTitleRow = {
@@ -87,7 +92,7 @@ const accordionTitleContainer = {
     flexDirection: "row" as "row",
     alignItems: "center",
     padding: "0px",
-    gap: "25px",
+    gap: "5px",
     marginLeft: '-25px'
 }
 
@@ -134,8 +139,11 @@ const subtitlecontainer = {
     textAlign: "left" as "left"
 }
 
-export function WorkProcess() {
+//TODO: Calculate Accordion width based on screen width!!
+
+export function WorkProcess(props: GeneralProps) {
     const [accordionOpen, setAccordionOpen] = React.useState(0);
+
     return <section style={WorkProcessSection}>
         <div style={workProcessTitleContainer}>
             <div style={workProcessTitle}>The Process</div>
@@ -146,7 +154,7 @@ export function WorkProcess() {
                 accordionOpen={accordionOpen}
                 setAccordionOpen={setAccordionOpen}
                 title="Create an Event"
-                subtitle="Open up the application and you will be prompted to fill out a form with the event details. The price of tickets, how many are sold and more."
+                subtitle="Open up the application and you will be prompted to fill out a form with the event details."
                 accordionNumber={1}
             ></Accordion>
             <Accordion
@@ -166,15 +174,15 @@ export function WorkProcess() {
             <Accordion
                 accordionOpen={accordionOpen}
                 setAccordionOpen={setAccordionOpen}
-                title="Transfer, Refund or Resell Tickets"
-                subtitle="The purchaser of the ticket can request to transfer the ticket, ask the organizer for a refund or list the tickets for sale."
+                title="Transfer, Refund, Resell "
+                subtitle="Request to transfer the ticket, ask the organizer for a refund or list the tickets for sale."
                 accordionNumber={4}
             ></Accordion>
             <Accordion
                 accordionOpen={accordionOpen}
                 setAccordionOpen={setAccordionOpen}
                 title="Protected resale market"
-                subtitle="The speculative resale is only available if the event creator allows it and creating custom priced resales require staking tokens to mitigate bots."
+                subtitle="The speculative resale is only available if the event creator allows it and creating custom priced resales require staking tokens."
                 accordionNumber={5}
             ></Accordion>
         </div>

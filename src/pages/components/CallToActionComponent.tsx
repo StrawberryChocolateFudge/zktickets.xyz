@@ -1,18 +1,23 @@
 import React from "react";
+import { GeneralProps } from "..";
 
 //@ts-ignore
 import IdeationLogo from "../../images/undraw_ideation.svg";
 
 const sectionStyle = {
     marginTop: "20px",
+    display: "flex",
+    flexDirection: "row" as "row",
+    justifyContent: "center"
+
 }
 
 const callToActionContainer = {
     display: "flex",
     flexDirection: "row" as "row",
     alignItems: "center",
-    padding: "0px 60px",
-    width: "370px",
+    padding: "0px 10px",
+    maxWidth: "370px",
     height: "347px",
     background: "#F3F3F3",
     borderRadius: "45px"
@@ -55,7 +60,7 @@ const launchTheAppButton = {
     fontSize: "15px"
 }
 
-export function CallToAcionComponent() {
+export function CallToAcionComponent(props: GeneralProps) {
     return <section style={sectionStyle}>
         <div style={callToActionContainer}>
             <div style={callToActionTextContainer}>

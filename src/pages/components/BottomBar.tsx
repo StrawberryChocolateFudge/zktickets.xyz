@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { ZkTicketsLogo } from "./ZkTicketsLogo";
+import { GeneralProps } from "..";
 
 const BottomBarSection = {
     marginTop: "20px",
@@ -8,7 +9,7 @@ const BottomBarSection = {
     flexDirection: "column" as "column",
     alignItems: "center",
     padding: "50px 20px 30px",
-    width: "100%",
+    // width: "100%",
     background: "#191A23"
 
 }
@@ -46,7 +47,7 @@ const anchor = {
     textDecoration: "none"
 }
 
-export function BottomBar() {
+export function BottomBar(props: GeneralProps) {
     return <section style={BottomBarSection}>
         <div style={BottomRow}>
             <ZkTicketsLogo color="white"></ZkTicketsLogo>

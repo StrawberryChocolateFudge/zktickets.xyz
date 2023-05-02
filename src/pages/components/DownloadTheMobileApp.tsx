@@ -1,17 +1,21 @@
 import React from "react";
+import { GeneralProps } from "..";
 
 //@ts-ignore
 import AccessDenied from "../../images/undraw_access_denied.svg";
 
 const downloadAppSection = {
-    marginTop: "20px"
+    marginTop: "20px",
+    display: "flex",
+    flexDirection: "row" as "row",
+    justifyContent: "center"
 }
 
 const callToActionContainer = {
     display: "flex",
     flexDirection: "row" as "row",
     alignItems: "center",
-    padding: "0px 60px",
+    padding: "0px 10px",
     width: "370px",
     height: "347px",
     background: "#F3F3F3",
@@ -59,7 +63,7 @@ const accessDeniedLogoStyle = {
     marginTop: "15px"
 }
 
-export function DownloadTheMobileApp() {
+export function DownloadTheMobileApp(props: GeneralProps) {
     return <section style={downloadAppSection}>
         <div style={callToActionContainer}>
             <div style={callToActionTextContainer}>

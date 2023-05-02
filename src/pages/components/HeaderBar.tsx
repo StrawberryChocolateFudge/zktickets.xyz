@@ -1,4 +1,5 @@
 import React from "react";
+import { GeneralProps } from "..";
 //@ts-ignore
 import logo from "../../images/logo.png";
 //@ts-ignore
@@ -11,13 +12,10 @@ const headerSectionStyle = {
 const headerRow = {
     display: "flex",
     flexDirection: "row" as "row",
+    justifyContent: "center",
     alignItems: "center",
     padding: "0px 20px",
     gap: "222px"
-}
-
-const logoStyle = {
-    width: "100px"
 }
 
 const navigatorEl = {}
@@ -25,13 +23,14 @@ const navigatorEl = {}
 const titleContainer = {
     display: "flex",
     flexDirection: "row" as "row",
+    justifyContent: "center",
     alignItems: "flex-start",
     padding: "0px 20px",
     gap: "10px",
 }
 
 const TitleText = {
-    width: "390px",
+    maxWidth: "390px",
     // height: "165px",
     fontFamily: "Space Grotesk",
     fontStyle: "normal",
@@ -39,14 +38,18 @@ const TitleText = {
     fontSize: "30px",
     // lineHeight: "55px",
     color: "#000000",
-    flex: "none",
-    order: 0,
-    flexGrow: 0
+}
+
+const subtitleRow = {
+    display: "flex",
+    flexDirection: "row" as "row",
+    justifyContent: "center"
 }
 
 const subtitleContainer = {
     marginTop: "20px",
     marginBottom: "20px",
+    justifyContent: "center",
     display: "flex",
     flexDirection: "row" as "row",
     alignItems: "flex-start",
@@ -56,21 +59,21 @@ const subtitleContainer = {
 }
 
 const subtitle = {
-    width: "340px",
+    maxWidth: "390px",
     heigth: "96px",
     fontFamily: "Space Grotesk",
     fontStyle: "normal",
     fontWeight: "400",
     fontSize: "16px",
     lineHeight: "24px",
-    color: "#000000",
-    flex: "none",
-    order: "0",
-    flexGrow: "0"
+    color: "#000000"
 }
 
 const headerImageContainer = {
     padding: "0px 20px",
+    display: "flex",
+    flexDirection: "row" as "row",
+    justifyContent: "center"
 
 }
 
@@ -82,7 +85,9 @@ const headerImageStyle = {
 
 const subtitleOutterContainer = {
     display: "flex",
-    flexDirection: "column" as "column"
+    flexDirection: "column" as "column",
+    justifyContent: "center",
+
 }
 
 const tryItButtonContainer = {
@@ -104,30 +109,68 @@ const tryItOutButton = {
     margin: "0 auto",
     cursor: "pointer"
 }
-// I need to get the screen width to determine if it's a phone or not
 
-export function HeaderBar() {
-    return <section style={headerSectionStyle}>
-        <div style={headerRow}>
-            <ZkTicketsLogo color="black"></ZkTicketsLogo>
-            <div style={navigatorEl}>
-            </div>
-        </div>
-        <div style={titleContainer}>
-            <div style={TitleText}>A Trustless Event Ticketing Protocol</div>
-        </div>
-        <div style={headerImageContainer}>
-            <img style={headerImageStyle} src={party} />
-        </div>
-        <div style={subtitleOutterContainer}>
-            <div style={subtitleContainer}>
-                <div style={subtitle}>
-                    Our Zero-Knwoeldge Proof based event ticketing solution helps event organizers sell and verify tickets without relying on third-parties.
+export function HeaderBar(props: GeneralProps) {
+    if (props.windowSize > 1000) {
+
+        return <section style={headerSectionStyle}>
+
+
+            <div style={subtitleRow}>
+
+                <div style={subtitleOutterContainer}>
+                    {/* <div style={headerRow}>
+                        <ZkTicketsLogo color="black"></ZkTicketsLogo>
+                        <div style={navigatorEl}>
+                        </div>
+                    </div> */}
+                    <div style={titleContainer}>
+                        <div style={TitleText}>A Trustless Event Ticketing Protocol</div>
+                    </div>
+                    <div style={subtitleContainer}>
+                        <div style={subtitle}>
+                            Our Zero-Knowledge Proof based event ticketing solution helps event organizers sell and verify tickets without relying on third-parties.
+                        </div>
+                    </div>
+                    <div style={tryItButtonContainer}>
+                        <button onClick={() => window.location.href = "https://btt.zktickets.xyz"} style={tryItOutButton}>Try it out</button>
+                    </div>
+                </div>
+                <div style={headerImageContainer}>
+                    <img style={headerImageStyle} src={party} />
                 </div>
             </div>
-            <div style={tryItButtonContainer}>
-                <button onClick={() => window.location.href = "https://btt.zktickets.xyz"} style={tryItOutButton}>Try it out</button>
+        </section>
+
+
+    } else {
+        return <section style={headerSectionStyle}>
+            {/* <div style={headerRow}>
+                <ZkTicketsLogo color="black"></ZkTicketsLogo>
+                <div style={navigatorEl}>
+                </div>
+            </div> */}
+            <div style={titleContainer}>
+                <div style={TitleText}>A Trustless Event Ticketing Protocol</div>
             </div>
-        </div>
-    </section>
+            <div style={headerImageContainer}>
+                <img style={headerImageStyle} src={party} />
+            </div>
+            <div style={subtitleRow}>
+                <div style={subtitleOutterContainer}>
+                    <div style={subtitleContainer}>
+                        <div style={subtitle}>
+                            Our Zero-Knowledge Proof based event ticketing solution helps event organizers sell and verify tickets without relying on third-parties.
+                        </div>
+                    </div>
+                    <div style={tryItButtonContainer}>
+                        <button onClick={() => window.location.href = "https://btt.zktickets.xyz"} style={tryItOutButton}>Try it out</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    }
+
+
+
 }

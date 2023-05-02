@@ -1,4 +1,5 @@
 import React from "react";
+import { GeneralProps } from "..";
 
 const CaseStudiesSection = {
     marginTop: "35px"
@@ -6,7 +7,7 @@ const CaseStudiesSection = {
 
 const caseStudiesTitleContainer = {
     display: "flex",
-    flexDirection: "colummn" as "column",
+    // flexDirection: "column" as "column",
     justifyContent: "center" as "center",
     flexWrap: "wrap" as "wrap",
     textAlign: "center" as "center",
@@ -22,7 +23,6 @@ const caseStudiesTitle = {
     fontSize: "40px",
     lineHeight: "51px",
     height: "60px",
-    margin: "0 auto"
 }
 
 const caseStudiesSubtitle = {
@@ -37,7 +37,7 @@ const scrollableCardContainer = {
     overflowX: "scroll" as "scroll",
     overflowY: "hidden" as "hidden",
     "-webkit-overflow-scrolling": "touch",
-    width: "500px",
+    // width: "500px",
 }
 
 const useCaseCard = {
@@ -53,17 +53,31 @@ const useCaseCard = {
     fontWeight: "400",
     fontStyle: "normal",
     fontSize: "20px",
-    fontFamily: "Space Grotesk"
+    fontFamily: "Space Grotesk",
+    textAlign: "center" as "center"
+
 }
 
-export function CaseStudies() {
+const tableStyle = {
+    margin: "0 auto"
+}
+
+export function CaseStudies(props: GeneralProps) {
+
+    let scrollbarDisabledClass = "";
+
+    if (props.windowSize > 1000) {
+        scrollbarDisabledClass = "disable-scrollbars"
+    }
+
+
     return <section style={CaseStudiesSection}>
         <div style={caseStudiesTitleContainer}>
             <div style={caseStudiesTitle}>Case Studies</div>
             <div style={caseStudiesSubtitle}>Explore some use-cases of our technology!</div>
         </div>
-        <div style={scrollableCardContainer}>
-            <table>
+        <div className={scrollbarDisabledClass} style={scrollableCardContainer}>
+            <table style={tableStyle}>
                 <tr >
                     <td><article style={useCaseCard}>
                         A local venue can sell tickets for crypto currency and verify the tickets at the door. They can choose to airdrop NFTs or other tokens when the tickets are scanned and profit from ticket sales and tokenomics.
