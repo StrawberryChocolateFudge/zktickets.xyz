@@ -19,7 +19,9 @@ const callToActionContainer = {
     width: "370px",
     height: "347px",
     background: "#F3F3F3",
-    borderRadius: "45px"
+    borderRadius: "45px",
+    boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
+
 }
 
 const callToActionTextContainer = {
@@ -54,7 +56,7 @@ const launchTheAppButton = {
     padding: "20px 35px",
     cursor: "pointer",
     color: "white",
-    fontSize: "20px",
+    fontSize: "13px",
     textDecoration: "none"
 }
 
@@ -65,7 +67,7 @@ const accessDeniedLogoStyle = {
 
 export function DownloadTheMobileApp(props: GeneralProps) {
     return <section style={downloadAppSection}>
-        <div style={callToActionContainer}>
+        <div className="grow" style={callToActionContainer}>
             <div style={callToActionTextContainer}>
                 <div style={callToActionTitle}>Download the Android App</div>
                 <div style={callToActionSubtitle}>A Non-custodial wallet specifically designed to verify tickets created with ZkTickets!</div>

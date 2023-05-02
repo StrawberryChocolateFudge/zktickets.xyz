@@ -59,7 +59,7 @@ const displayCardsContainer = {
     flexDirection: "row" as "row",
     justifyContent: "space-around",
     flexWrap: "wrap" as "wrap",
-    gap: "10px"
+    gap: "30px"
 }
 
 const displayCards = (bg: string) => {
@@ -68,7 +68,7 @@ const displayCards = (bg: string) => {
         flexDirection: "column" as "column",
         alignItems: "flex-start",
         padding: "50px",
-        width: "200px",
+        width: "300px",
         height: "200px",
         background: bg,
         border: "1px solid #191A23",
@@ -102,28 +102,34 @@ const cardTitle = (bg: string) => {
 
 const transferImage = {
     width: "200px",
-    marginTop: "10px"
+    marginTop: "10px",
+    marginLeft: "50px"
 }
 
 const authenticateImage = {
     width: "170px",
-    marginTop: "10px"
+    marginTop: "10px",
+    marginLeft: '50px'
 }
 
 const paymentPeopleImage = {
     width: "200px",
-    marginTop: "10px"
+    marginTop: "10px",
+    marginLeft: '50px'
+
 }
 
 const investmentLogoImage = {
-    width: "200px",
-    marginTop: "10px"
+    width: "180px",
+    marginTop: "10px",
+    marginLeft: '50px'
 }
 
 const etherLogoImage = {
     width: "130px",
     marginTop: "10px",
-    marginLeft: "40px"
+    marginLeft: "80px",
+
 }
 
 const onlinePaymentsImage = {
@@ -138,141 +144,64 @@ const titleSubtitleContainer = {
     textAlign: "center" as "center"
 }
 
-const spacer = {
-    marginLeft: "20px"
-}
 
 export function Features(props: GeneralProps) {
-    if (props.windowSize > 1000) {
-
-        return <section style={servicesSection}>
-            <div style={servicesTitleContainer}>
-                <div style={titleSubtitleContainer}>
-                    <div style={servicesTitle}>
-                        Features
-                    </div>
-                    <div style={servicesSubtitle}>
-                        Our Protocol offers a variety of features to help event organizers successfully sell tickets online, mixed with some DeFi features. These include:
-                    </div>
+    return <section style={servicesSection}>
+        <div style={servicesTitleContainer}>
+            <div style={titleSubtitleContainer}>
+                <div style={servicesTitle}>
+                    Features
                 </div>
-
-
-
-                <div style={displayCardsContainer}>
-                    <div style={displayCards("#F3F3F3")}>
-                        <div style={cardContent}>
-                            <div style={cardTitle("#F7A5CD")}>Sell Without a Middle-Man</div>
-                            <img style={transferImage} src={transferMoneyLogo} />
-                        </div>
-                    </div>
-                    <div style={spacer}></div>
-                    <div style={displayCards("#F7A5CD")}>
-                        <div style={cardContent}>
-                            <div style={cardTitle("#F3F3F3")}>Verify Tickets Easily</div>
-                            <img style={authenticateImage} src={authenticationLogo} />
-                        </div>
-                    </div>
-                    <div style={spacer}></div>
-                    <div style={displayCards("#000000")}>
-                        <div style={cardContent}>
-                            <div style={cardTitle("#F3F3F3")}>Resell or Transfer The Tickets</div>
-                            <img style={paymentPeopleImage} src={paymentPeopleLogo} />
-                        </div>
-                    </div>
+                <div style={servicesSubtitle}>
+                    Our Protocol offers a variety of features to help event organizers successfully sell tickets online, mixed with some DeFi features. These include:
                 </div>
-                <div style={displayCardsContainer}>
-                    <div style={displayCards("#F3F3F3")}>
-                        <div style={cardContent}>
-                            <div style={cardTitle("#F7A5CD")}>EVM Compatible Protocol</div>
-                            <img style={etherLogoImage} src={etherLogo} />
-                        </div>
-                    </div>
-                    <div style={spacer}></div>
-                    <div style={displayCards("F7A5CD")}>
-                        <div style={cardContent}>
-                            <div style={cardTitle("#F3F3F3")}>Ticket Refunds Supported</div>
-                            <img style={onlinePaymentsImage} src={onlinePaymentsLogo} />
-                        </div>
-                    </div>
-                    <div style={spacer}></div>
-                    <div style={displayCards("#000000")}>
-                        <div style={cardContent}>
-                            <div style={cardTitle("#F3F3F3")}>Optional Resale Price Speculation</div>
-                            <img style={investmentLogoImage} src={investmentLogo} />
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
-        </section >
 
-    } else {
-
-        const addSpacer = props.windowSize < 639;
-
-
-        return <section style={servicesSection}>
-            <div style={servicesTitleContainer}>
-                <div style={titleSubtitleContainer}>
-                    <div style={servicesTitle}>
-                        Features
-                    </div>
-                    <div style={servicesSubtitle}>
-                        Our Protocol offers a variety of features to help event organizers successfully sell tickets online, mixed with some DeFi features. These include:
+            <div style={displayCardsContainer}>
+                <div className="grow" style={displayCards("#F3F3F3")}>
+                    <div style={cardContent}>
+                        <div style={cardTitle("#F7A5CD")}>Sell Without a Middle-Man</div>
+                        <img style={transferImage} src={transferMoneyLogo} />
                     </div>
                 </div>
 
-
-
-                <div style={displayCardsContainer}>
-                    <div style={displayCards("#F3F3F3")}>
-                        <div style={cardContent}>
-                            <div style={cardTitle("#F7A5CD")}>Sell Without a Middle-Man</div>
-                            <img style={transferImage} src={transferMoneyLogo} />
-                        </div>
-                    </div>
-
-                    <div style={displayCards("#F7A5CD")}>
-                        <div style={cardContent}>
-                            <div style={cardTitle("#F3F3F3")}>Verify Tickets Easily</div>
-                            <img style={authenticateImage} src={authenticationLogo} />
-                        </div>
+                <div className="grow" style={displayCards("#F7A5CD")}>
+                    <div style={cardContent}>
+                        <div style={cardTitle("#F3F3F3")}>Verify Tickets Easily</div>
+                        <img style={authenticateImage} src={authenticationLogo} />
                     </div>
                 </div>
-
-                <div style={displayCardsContainer}>
-                    <div style={displayCards("#000000")}>
-                        <div style={cardContent}>
-                            <div style={cardTitle("#F3F3F3")}>Resell or Transfer The Tickets</div>
-                            <img style={paymentPeopleImage} src={paymentPeopleLogo} />
-                        </div>
-                    </div>
-
-                    <div style={displayCards("#F3F3F3")}>
-                        <div style={cardContent}>
-                            <div style={cardTitle("#F7A5CD")}>EVM Compatible Protocol</div>
-                            <img style={etherLogoImage} src={etherLogo} />
-                        </div>
-                    </div>
-                </div>
-                <div style={displayCardsContainer}>
-                    <div style={displayCards("F7A5CD")}>
-                        <div style={cardContent}>
-                            <div style={cardTitle("#F3F3F3")}>Ticket Refunds Supported</div>
-                            <img style={onlinePaymentsImage} src={onlinePaymentsLogo} />
-                        </div>
-                    </div>
-                    <div style={displayCards("#000000")}>
-                        <div style={cardContent}>
-                            <div style={cardTitle("#F3F3F3")}>Optional Resale Price Speculation</div>
-                            <img style={investmentLogoImage} src={investmentLogo} />
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
-        </section >
-    }
+
+            <div style={displayCardsContainer}>
+                <div className="grow" style={displayCards("#000000")}>
+                    <div style={cardContent}>
+                        <div style={cardTitle("#F3F3F3")}>Resell or Transfer The Tickets</div>
+                        <img style={paymentPeopleImage} src={paymentPeopleLogo} />
+                    </div>
+                </div>
+
+                <div className="grow" style={displayCards("#F3F3F3")}>
+                    <div style={cardContent}>
+                        <div style={cardTitle("#F7A5CD")}>EVM Compatible Protocol</div>
+                        <img style={etherLogoImage} src={etherLogo} />
+                    </div>
+                </div>
+            </div>
+            <div style={displayCardsContainer}>
+                <div className="grow" style={displayCards("F7A5CD")}>
+                    <div style={cardContent}>
+                        <div style={cardTitle("#F3F3F3")}>Ticket Refunds Supported</div>
+                        <img style={onlinePaymentsImage} src={onlinePaymentsLogo} />
+                    </div>
+                </div>
+                <div className="grow" style={displayCards("#000000")}>
+                    <div style={cardContent}>
+                        <div style={cardTitle("#F3F3F3")}>Optional Resale Price Speculation</div>
+                        <img style={investmentLogoImage} src={investmentLogo} />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 }

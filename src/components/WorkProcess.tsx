@@ -211,6 +211,7 @@ function Accordion(props: AccordionProps) {
         //Render open accordion
         return <div
             style={accordionOutterContainerOpen}
+            className="grow"
             onClick={() => onAccordionClosed()}>
             <div style={accordionTitleRow}>
                 <div style={accordionTitleContainer}>
@@ -226,7 +227,7 @@ function Accordion(props: AccordionProps) {
         </div>
     } else {
         // render close accordion
-        return <div onClick={() => onAccordionOpen()} style={accordionOutterContainerClosed}>
+        return <div className="grow" onClick={() => onAccordionOpen()} style={accordionOutterContainerClosed}>
             <div style={accordionTitleRow}>
                 <div style={accordionTitleContainer}>
                     <div style={accordionIndex}>0{props.accordionNumber}</div>

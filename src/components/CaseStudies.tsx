@@ -79,14 +79,14 @@ export function CaseStudies(props: GeneralProps) {
         <div className={scrollbarDisabledClass} style={scrollableCardContainer}>
             <table style={tableStyle}>
                 <tr >
-                    <td><article style={useCaseCard}>
+                    <td><article className="grow" style={useCaseCard}>
                         A local venue can sell tickets for crypto currency and verify the tickets at the door. They can choose to airdrop NFTs or other tokens when the tickets are scanned and profit from ticket sales and tokenomics.
                     </article></td>
-                    <td><article style={useCaseCard}>
+                    <td><article className="grow" style={useCaseCard}>
                         An Influencer may create tickets for virtual meetings and allow ticket price speculation.
                         The tickets can be purchased as a form of investment and the event creator will earn passive income from ticket resales.
                     </article></td>
-                    <td><article style={useCaseCard}>
+                    <td><article className="grow" style={useCaseCard}>
                         A metaverse citizen may sell tickets to visit virtual real estate.. The ticket sales provide a direct income for the creator and the tickets are validated by the attendees whenever they want.
                     </article></td>
                 </tr>

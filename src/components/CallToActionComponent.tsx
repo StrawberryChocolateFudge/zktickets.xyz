@@ -16,11 +16,13 @@ const callToActionContainer = {
     display: "flex",
     flexDirection: "row" as "row",
     alignItems: "center",
+    justifyContent: "space-evently",
     padding: "0px 10px",
-    maxWidth: "370px",
+    // maxWidth: "370px",
     height: "347px",
     background: "#F3F3F3",
-    borderRadius: "45px"
+    borderRadius: "45px",
+    boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
 }
 const IdeationLogoStyle = {
     width: "200px",
@@ -40,7 +42,8 @@ const callToActionTitle = {
     fontWeight: "500",
     fontSize: "20px",
     color: "#000000",
-    marginBottom: "10px"
+    marginBottom: "10px",
+    maxWidth: "200px"
 }
 
 const callToActionSubtitle = {
@@ -48,7 +51,8 @@ const callToActionSubtitle = {
     fontStyle: "normal",
     fontWeight: "500",
     fontSize: "13px",
-    color: "#0000000"
+    color: "#0000000",
+    maxWidth: "200px"
 }
 
 const launchTheAppButton = {
@@ -57,12 +61,13 @@ const launchTheAppButton = {
     padding: "20px 35px",
     cursor: "pointer",
     color: "white",
-    fontSize: "15px"
+    fontSize: "15px",
+    maxWidth: "200px"
 }
 
 export function CallToAcionComponent(props: GeneralProps) {
     return <section style={sectionStyle}>
-        <div style={callToActionContainer}>
+        <div className="grow" style={callToActionContainer}>
             <div style={callToActionTextContainer}>
                 <div style={callToActionTitle}>Let's make events happen!</div>
                 <div style={callToActionSubtitle}>Try the application today and create your first event. It's very easy. Just select the network and fill out the form!</div>

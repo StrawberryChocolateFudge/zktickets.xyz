@@ -22,6 +22,11 @@ const IndexPage: React.FC<PageProps> = () => {
   }, []);
 
   React.useEffect(() => {
+    setWindowSize(window.innerWidth);
+  },[])
+
+
+  React.useEffect(() => {
     window.addEventListener('resize', handleWindowResize);
     return () => {
       window.removeEventListener('resize', handleWindowResize);
