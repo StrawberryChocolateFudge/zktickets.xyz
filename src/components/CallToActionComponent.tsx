@@ -1,14 +1,15 @@
 import React from "react";
-import { GeneralProps } from "..";
+import { GeneralProps } from "../pages";
 
 //@ts-ignore
-import AccessDenied from "../../images/undraw_access_denied.svg";
+import IdeationLogo from "../images/undraw_ideation.svg";
 
-const downloadAppSection = {
+const sectionStyle = {
     marginTop: "20px",
     display: "flex",
     flexDirection: "row" as "row",
     justifyContent: "center"
+
 }
 
 const callToActionContainer = {
@@ -16,10 +17,13 @@ const callToActionContainer = {
     flexDirection: "row" as "row",
     alignItems: "center",
     padding: "0px 10px",
-    width: "370px",
+    maxWidth: "370px",
     height: "347px",
     background: "#F3F3F3",
     borderRadius: "45px"
+}
+const IdeationLogoStyle = {
+    width: "200px",
 }
 
 const callToActionTextContainer = {
@@ -47,31 +51,24 @@ const callToActionSubtitle = {
     color: "#0000000"
 }
 
-
 const launchTheAppButton = {
     background: "#191A23",
     borderRadius: "14px",
     padding: "20px 35px",
     cursor: "pointer",
     color: "white",
-    fontSize: "20px",
-    textDecoration: "none"
+    fontSize: "15px"
 }
 
-const accessDeniedLogoStyle = {
-    width: "200px",
-    marginTop: "15px"
-}
-
-export function DownloadTheMobileApp(props: GeneralProps) {
-    return <section style={downloadAppSection}>
+export function CallToAcionComponent(props: GeneralProps) {
+    return <section style={sectionStyle}>
         <div style={callToActionContainer}>
             <div style={callToActionTextContainer}>
-                <div style={callToActionTitle}>Download the Android App</div>
-                <div style={callToActionSubtitle}>A Non-custodial wallet specifically designed to verify tickets created with ZkTickets!</div>
-                <a href={"https://btt.zktickets.xyz/up_/apk/ZkTickets_Scanner_0.0.1_release.apk"} style={launchTheAppButton}>Side-Load the App</a>
+                <div style={callToActionTitle}>Let's make events happen!</div>
+                <div style={callToActionSubtitle}>Try the application today and create your first event. It's very easy. Just select the network and fill out the form!</div>
+                <button onClick={() => window.location.href = "https://btt.zktickets.xyz"} style={launchTheAppButton}>Launch the App</button>
             </div>
-            <img style={accessDeniedLogoStyle} src={AccessDenied} />
+            <img style={IdeationLogoStyle} src={IdeationLogo} />
         </div>
     </section>
 }

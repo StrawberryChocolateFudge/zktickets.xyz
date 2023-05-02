@@ -2,10 +2,10 @@
 import React from "react";
 
 //@ts-ignore
-import PlusLogo from "../../images/plusIcon.svg";
+import PlusLogo from "../images/plusIcon.svg";
 //@ts-ignore
-import MinusLogo from "../../images/minusIcon.svg";
-import { GeneralProps } from "..";
+import MinusLogo from "../images/minusIcon.svg";
+import { GeneralProps } from "../pages";
 
 const WorkProcessSection = { marginTop: "30px" }
 

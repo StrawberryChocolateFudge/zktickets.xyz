@@ -1,17 +1,17 @@
 import React from "react";
 //@ts-ignore
-import transferMoneyLogo from "../../images/undraw_transfer_money.svg";
+import transferMoneyLogo from "../images/undraw_transfer_money.svg";
 //@ts-ignore
-import authenticationLogo from "../../images/undraw_authentication.svg";
+import authenticationLogo from "../images/undraw_authentication.svg";
 //@ts-ignore
-import paymentPeopleLogo from "../../images/undraw_credit_card_payment.svg";
+import paymentPeopleLogo from "../images/undraw_credit_card_payment.svg";
 //@ts-ignore
-import investmentLogo from "../../images/undraw_investment.svg";
+import investmentLogo from "../images/undraw_investment.svg";
 //@ts-ignore
-import etherLogo from "../../images/undraw_ether.svg";
+import etherLogo from "../images/undraw_ether.svg";
 //@ts-ignore
-import onlinePaymentsLogo from "../../images/undraw_online_payments.svg";
-import { GeneralProps } from "..";
+import onlinePaymentsLogo from "../images/undraw_online_payments.svg";
+import { GeneralProps } from "../pages";
 
 
 const servicesSection = {

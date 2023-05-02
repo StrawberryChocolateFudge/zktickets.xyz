@@ -1,5 +1,5 @@
 import React from "react";
-import { GeneralProps } from "..";
+import { GeneralProps } from "../pages";
 
 const CaseStudiesSection = {
     marginTop: "35px"

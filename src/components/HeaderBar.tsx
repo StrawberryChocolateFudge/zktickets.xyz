@@ -1,9 +1,9 @@
 import React from "react";
-import { GeneralProps } from "..";
+import { GeneralProps } from "../pages";
 //@ts-ignore
-import logo from "../../images/logo.png";
+import logo from "../images/logo.png";
 //@ts-ignore
-import party from "../../images/undraw_online_party.svg";
+import party from "../images/undraw_online_party.svg";
 import { ZkTicketsLogo } from "./ZkTicketsLogo";
 
 const headerSectionStyle = {

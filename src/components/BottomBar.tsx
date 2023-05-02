@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { ZkTicketsLogo } from "./ZkTicketsLogo";
-import { GeneralProps } from "..";
+import { GeneralProps } from "../pages";
 
 const BottomBarSection = {
     marginTop: "20px",

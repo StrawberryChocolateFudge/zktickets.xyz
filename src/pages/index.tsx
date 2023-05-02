@@ -1,21 +1,21 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
-import { HeaderBar } from "./components/HeaderBar"
-import { Features } from "./components/Features"
-import { CallToAcionComponent } from "./components/CallToActionComponent"
-import { CaseStudies } from "./components/CaseStudies"
-import { WorkProcess } from "./components/WorkProcess"
-import { DownloadTheMobileApp } from "./components/DownloadTheMobileApp"
-import { BottomBar } from "./components/BottomBar";
+import { HeaderBar } from "../components/HeaderBar"
+import { Features } from "../components/Features"
+import { CallToAcionComponent } from "../components/CallToActionComponent"
+import { CaseStudies } from "../components/CaseStudies"
+import { WorkProcess } from "../components/WorkProcess"
+import { DownloadTheMobileApp } from "../components/DownloadTheMobileApp"
+import { BottomBar } from "../components/BottomBar";
 import "./styles.css";
 
-export interface GeneralProps{
-      windowSize: number;
+export interface GeneralProps {
+  windowSize: number;
 }
 
 const IndexPage: React.FC<PageProps> = () => {
 
-  const [windowSize, setWindowSize] = React.useState(window.innerWidth);
+  const [windowSize, setWindowSize] = React.useState(500);
 
   const handleWindowResize = React.useCallback((event: any) => {
     setWindowSize(window.innerWidth);
